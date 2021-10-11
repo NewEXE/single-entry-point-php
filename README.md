@@ -10,11 +10,9 @@ Implemented with Apache and PHP. Will free to send PR's for support other server
 ### How it works
 All user's requests to application was redirected to `public` directory.
 
-All other folders are inaccessible.
+All other folders are inaccessible. So user can get access to all files in `public` folder (except `.htaccess`), but no others.
 
-User can get access to all files in `public` folder (except `.htaccess`), but no others.
-
-If filename was specified (like `robots.txt`, `favicon.ico`), request was gone this file. Otherwise, to `index.php`.
+If filename was specified (like `robots.txt`, `favicon.ico`), request was gone to this file. Otherwise, to `index.php`.
 
 `index.php` is very simple "[Front controller pattern](https://en.wikipedia.org/wiki/Front_controller)" realization.
 
