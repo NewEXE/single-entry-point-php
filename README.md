@@ -16,4 +16,4 @@ If filename was specified (like `robots.txt`, `favicon.ico`), request was gone t
 
 `index.php` is very simple "[Front controller pattern](https://en.wikipedia.org/wiki/Front_controller)" realization.
 
-Depends on typed URI, front controller decide where PHP file need to include.
+Depends on typed URI, front controller decide which PHP file need to include.

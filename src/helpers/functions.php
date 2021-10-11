@@ -37,7 +37,7 @@ function filterInputString(int $type, string $varName): string
 }
 
 /**
- * Get part after GET-params from URI.
+ * Get part before GET-params in URI.
  * So from "https://site.com/page?p1=v1&p2=v2"
  * "https://site.com/page" was returned.
  *
