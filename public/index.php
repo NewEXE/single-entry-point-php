@@ -1,5 +1,10 @@
 <?php
 
+/*
+ * Front Controller
+ * (single entry point for all requests)
+ */
+
 define('ROOT', dirname(__FILE__, 2));
 
 require_once ROOT . '/src/helpers/functions.php';
