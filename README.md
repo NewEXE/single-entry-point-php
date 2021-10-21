@@ -3,6 +3,8 @@ PHP app carcase with all requests redirection to one single `index.php`.
 
 Implemented with Apache and PHP. Will free to send PR's for support other servers (nginx, IIS).
 
+Read more about [Front controller pattern](https://en.wikipedia.org/wiki/Front_controller).
+
 ## Requirements
 * PHP version >= 5.6
 * Apache 2.4
@@ -20,7 +22,7 @@ All other folders are inaccessible. So user can get access to all files in `publ
 
 If filename was specified (like `robots.txt`, `favicon.ico`), request was gone to this file. Otherwise, to `index.php`.
 
-`index.php` is very simple "[Front controller pattern](https://en.wikipedia.org/wiki/Front_controller)" realization.
+`index.php` is very simple "Front controller pattern" realization.
 
 Depends on typed URI, front controller decide which PHP file need to include.
 
