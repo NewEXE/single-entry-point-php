@@ -6,9 +6,10 @@
  */
 
 define('ROOT', dirname(__FILE__, 2));
+define('IS_CONSOLE', in_array(PHP_SAPI, ['cli', 'phpdbg'], true));
 
 // In case of console request, require single handler for such requests
-if (PHP_SAPI === 'cli') {
+if (IS_CONSOLE) {
     require ROOT . '/src/console/index-console.php';
     die(0);
 }
@@ -31,6 +32,7 @@ $_routes = require ROOT . '/src/config/routes.php';
 if (isset($_routes[$_requestUri])) {
     require_once ROOT . '/src/' . $_routes[$_requestUri];
 } else {
+    http_response_code(404);
     die('Error 404');
 }
 

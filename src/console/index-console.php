@@ -4,7 +4,7 @@ if (!defined('ROOT')) {
     _printUsageExample();
 }
 
-if (PHP_SAPI !== 'cli') {
+if (!IS_CONSOLE) {
     var_dump('Must be executed from console');
     _printUsageExample();
 }
