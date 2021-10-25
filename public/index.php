@@ -32,8 +32,9 @@ $_routes = require ROOT . '/src/config/routes.php';
 if (isset($_routes[$_requestUri])) {
     require_once ROOT . '/src/' . $_routes[$_requestUri];
 } else {
-    http_response_code(404);
-    die('Error 404');
+    $_code = 404;
+    http_response_code($_code);
+    die("Error $_code");
 }
 
 function _getRequestUri() {
